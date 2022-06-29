@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="heading" class="box">
+    <h1> Registration Form </h1>
+  </div>
+  <div id="root" class="box">
+    <form onsubmit="event.preventDefault();formSubmit();">
+      <div class="row">
+        <label>Name: </label><br>
+        <input type="text" placeholder="Enter your name" name="userName" id="userName" required>
+      </div>
+      <div class="row">
+        <label>Email: </label><br>
+        <input type="email" placeholder="Enter your email ID" name="email" id="email" required
+          oninvalid="this.setCustomValidity('Enter a valid email id.')" oninput="this.setCustomValidity('')">
+      </div>
+      <div class="row">
+        <label>Phone No.: </label><br>
+        <input type="text" placeholder="Enter your 10 digit phone no." id="phoneNo" name="phoneNo" size="10">
+      </div>
+      <div class="row">
+        <label>Gender: </label><br>
+        <input type="radio" name="gender" value="Male" checked>Male
+        <input type="radio" name="gender" value="Female">Female
+        <input type="radio" name="gender" value="Other">Other
+      </div>
+      <div class="row">
+        <label>Skills: </label><br>
+        <input type="checkbox" name="skills" value="Python">Python
+        <input type="checkbox" name="skills" value="Java">Java
+        <input type="checkbox" name="skills" value="C++">C++
+        <input type="checkbox" name="skills" value="React">React
+        <input type="checkbox" name="skills" value="PHP">PHP
+      </div>
+      <div class="row">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  <hr>
+  <div id="heading" class="box">
+    <h1> Registered Users </h1>
+  </div>
+  <div class="box" id="users">
+    <div class="row users">
+      <h2></h2>
+      <hr>
+      <h3></h3>
+      <p></p>
+      <p></p>
+      <p></p>
+      <button name="delete" onclick="del(this)">Delete</button>
+    </div>
+  </div>
+  <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
